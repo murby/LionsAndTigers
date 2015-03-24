@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var breedLabel: UILabel!
     
+    // create the blank array with type Tiger - created outside of functions so we can use it everywhere
     var myTigers:[Tiger] = []
     
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
         myTiger.age = 3
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         
+        // append the first Tiger
         myTigers.append(myTiger)
         
         println("My Tiger's name is \(myTiger.name), it's age is \(myTiger.age), it's breed is \(myTiger.breed)")
@@ -54,8 +56,8 @@ class ViewController: UIViewController {
         fourthTiger.age = 5
         fourthTiger.image = UIImage(named: "SiberianTiger.jpg")
         
+        // add the extra Tigers to the array
         myTigers += [secondTiger, thirdTiger, fourthTiger]
-    
     }
 
     override func didReceiveMemoryWarning() {
