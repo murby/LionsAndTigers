@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         myTiger.age = 3
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         
+        myTiger.chuff()
+        
         // append the first Tiger
         myTigers.append(myTiger)
         
@@ -79,11 +81,6 @@ class ViewController: UIViewController {
         
         let tiger = myTigers[randomIndex]
         
-//        myImageView.image = tiger.image
-//        nameLabel.text = tiger.name
-//        ageLabel.text = "\(tiger.age)"
-//        breedLabel.text = tiger.breed
-        
         
         UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
 
@@ -93,9 +90,9 @@ class ViewController: UIViewController {
             self.breedLabel.text = tiger.breed
             
             
-            }, completion: {
+        }, completion: {
                 (finished: Bool) -> () in
-                })
+            })
         
     }
 
